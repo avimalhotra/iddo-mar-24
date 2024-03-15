@@ -25,7 +25,7 @@ ul{ list-style: none; padding: 0;}
     font-display: swap;
 }
 
-html{ font-size: 15px; --red: #ca3c3c; --ff: proxima, sans-serif; }
+html{ font-size: 15px; --red: #ca3c3c; --ff: proxima, sans-serif; scroll-behavior: smooth; scroll-padding-top: 80px; }
 body{
     font-size: 16px;
     font-family:var(--ff);
@@ -56,7 +56,7 @@ body{
 .align-center{ align-items: center;}
 
 /* layout */
-header{ background: #000; color: #fff;}
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 1;}
 header a{ color: inherit; line-height: 80px; display: inline-block;}
 header h1{ font-size: 30px; }
 header nav{ margin-left: -20px;}
@@ -71,9 +71,34 @@ header nav li a{ padding: 0 15px; }
 .banner a{ color: var(--red);}
 
 
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
+.circle{ width: 100px; aspect-ratio: 1/1; border: 2px solid; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; font-size: 36px; margin-right: 2rem;}
+.feature h3{ font-size: 16px; margin-bottom: 10px; }
+.feature p{ font-size: 14px; font-weight: 100; line-height: 22px; }
+.gy-60{ gap: 60px 0;}
+
+
+.wrap-4{ background: #fff; color: var(--red); line-height: 150px; text-align: center; font-size: 36px;}
+
+
+.wrap-5{ padding: 100px 0; background: #ebebeb; color: #363636; }
+.wrap-5 .btn{ margin: 30px 10px 60px 0;}
+.wrap-5 .btn.active{ background: var(--red); color: #fff; border-color: var(--red); }
+.work{ position: relative; text-align: center; margin-bottom: 2rem; overflow: hidden;}
+.work figcaption{ position: absolute; background: #fff; bottom: -100px; left: 0; right: 0; padding: 20px 0;  transition: 400ms; opacity: 0; }
+.work h3{ color: var(--red); font-size: 18px; line-height: 40px; }
+.work p{ color: #898989; font-size: 14px; font-weight: 100; line-height: 20px; }
+.img-resp{ max-width: 100%; height: auto;}
+.work:hover figcaption{ opacity: 1; bottom: 0;}
+.seemore{ font-size: 36px; color: var(--red); border: none; border: none; }
+
+
+
 
 @media screen and (max-width:1220px){
     html{ font-size: 14px;}
+    h2{ font-size: 62px; margin-bottom: 30px;}
 }
 
 @media screen and (max-width:980px){
@@ -94,7 +119,7 @@ header nav li a{ padding: 0 15px; }
 @media screen and (max-width:767px){
     html{ font-size: 12px;}
     .collapse{ display: none;}
-
+    .wrap-5 .btn{ margin-right: 6px;}
 }
 @media screen and (max-width:460px){
     .col-p-1{ flex-basis: 8.33%; max-width: 8.33%;}
@@ -110,4 +135,5 @@ header nav li a{ padding: 0 15px; }
     .col-p-11{ flex-basis: 91.66%; max-width: 91.66%;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
     .banner .flex{ flex-flow: column wrap;}
+    .work img{ width: 100%; height: 100%; object-fit: cover;}
 }
