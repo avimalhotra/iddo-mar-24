@@ -63,9 +63,12 @@ header nav{ margin-left: -20px;}
 header nav li{ margin: 0 5px;}
 header nav li a{ padding: 0 15px; }
 .btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff);}
-[for="chk"]{ display: none;  width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff); float: right; margin-top: 20px; padding: 5px 10px; }
-[for="chk"] span{ display: block; height: 2px; background: var(--red); margin: 4px 0; } 
-header input[type="checkbox"]:checked + .collapse{ display: block; }
+.mob{ display: none; width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff); float: right; margin-top: 20px; padding: 5px 10px; }
+.mob span{ display: block; height: 2px; background: var(--red); margin: 4px 0; transition: .3s; transform-origin: right center; } 
+/* header input[type="checkbox"]:checked + .collapse{ display: block; } */
+.mob.active span:nth-child(1){ transform: rotate(-10deg); }
+.mob.active span:nth-child(2){ opacity: 0; }
+.mob.active span:nth-child(3){ transform: rotate(10deg);  }
 
 
 .banner{ background: #666; color: #fff; padding: 200px 0;}
@@ -94,7 +97,8 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .work p{ color: #898989; font-size: 14px; font-weight: 100; line-height: 20px; }
 .img-resp{ max-width: 100%; height: auto;}
 .work:hover figcaption{ opacity: 1; bottom: 0;}
-.seemore{ font-size: 36px; color: var(--red); border: none; border: none; }
+.seemore{ font-size: 36px; color: var(--red); border: none; background: none;}
+.all:nth-child(7),.all:nth-child(8),.all:nth-child(9){ display: none;}
 
 
 
@@ -130,14 +134,14 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .wrap-9{ padding: 100px 0; background: #fff; color: #363636; }
 canvas{ background: #ddd; margin: 80px 0 0 0; max-width: 100%;}
 .accordion{ margin-top: 80px; color: #898989; }
-.accordion p{ display: none; font-size: 14px; color: #363636; line-height: 22px;}
-.accordion .active p{ display: block; padding: 20px;}
+.accordion p{ display: none; font-size: 14px; color: #363636; line-height: 22px;  padding: 20px;}
+.accordion li:first-child p{ display: block;}
 .accordion li{ margin-bottom: 10px;}
 .accordion a{ display: block; border: 1px solid #ebebeb; color: inherit; padding: 19px; border-radius: 10px;}
 .accordion a span.fa{ margin-right: 17px;}
-.accordion .active a{ color: var(--red);}
+.accordion a.active{ color: var(--red);}
 .accordion a::after{ content: '+'; float: right;}
-.accordion .active a::after{ content: '-'; }
+.accordion a.active::after{ content: '-'; }
 
 .wrap-10{ background: var(--red); padding: 23px 0 22px;}
 .wrap-10 input{ width: 370px; height: 35px; background: none; border: none; color: #fff; font:100 36px var(--ff)}
@@ -196,7 +200,7 @@ canvas{ background: #ddd; margin: 80px 0 0 0; max-width: 100%;}
     .col-m-6{ flex-basis: 50%; max-width: 50%;}
     .col-m-12{ flex-basis: 100%; max-width: 100%;}
     .box{ font-size: 16px;}
-    [for="chk"]{ display: block;}
+    .mob{ display: block;}
     .collapse{ position: absolute; left: 0; right: 0; top: 80px; background: #000;}
     .collapse ul, .collapse .flex{ flex-flow: column wrap;} 
     nav{ width: 100%; text-align: right;}
