@@ -25,7 +25,7 @@ ul{ list-style: none; padding: 0;}
     font-display: swap;
 }
 
-html{ font-size: 15px; --red: #ca3c3c; --ff: proxima, sans-serif; scroll-behavior: smooth; scroll-padding-top: 80px; }
+html{ font-size: 15px; --red: #ca3c3c; --ff: proxima, sans-serif; scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: hidden; }
 body{
     font-size: 16px;
     font-family:var(--ff);
@@ -106,12 +106,15 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .wrap-6 p{ font-size: 36px; line-height: 41px; font-weight: 100;}
 .wrap-6 img{ margin: 10px 0;}
 .wrap-6 figcaption{ font-weight: bold;}
-.review{ display: none; }
-.review.active{ display: block;}
 .pager{ display: flex; justify-content: center; margin-top: 25px;}
 .pager li{ margin: 0 5px;}
 .pager li a{ display: block; width: 10px; height: 10px; border: 2px solid; color: #fff; border-radius: 50%; }
 .pager li a.active{ background: #fff;}
+.wrap-6 .bx-wrapper{ background: none; border: none; box-shadow: 0 0;}
+.wrap-6 .bx-wrapper img{ margin: auto;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:hover,.wrap-6  .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6  .bx-wrapper .bx-pager.bx-default-pager a:focus{ background: #fff}
+
 
 
 .wrap-7{ padding: 100px 0; background: #fff; color: #363636; }
@@ -131,8 +134,8 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .wrap-8 b{ font-size: 18px; margin-bottom: 50px; display: inline-block;}
 
 
-.wrap-9{ padding: 100px 0; background: #fff; color: #363636; }
-canvas{ background: #ddd; margin: 80px 0 0 0; max-width: 100%;}
+.wrap-9{ padding: 100px 0; background: #fff; color: #363636;}
+canvas{ margin: 80px 0 0 0; }
 .accordion{ margin-top: 80px; color: #898989; }
 .accordion p{ display: none; font-size: 14px; color: #363636; line-height: 22px;  padding: 20px;}
 .accordion li:first-child p{ display: block;}
